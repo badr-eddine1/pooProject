@@ -18,9 +18,10 @@ return new class extends Migration
             $table->foreignId('auteur_id')->constrained('auteurs')->onDelete('cascade');  // Corrigé ici : 'autreurs' => 'auteurs'
             $table->foreignId('categorie_id')->constrained('categories')->onDelete('cascade');
             $table->date('date_publication');
+            $table->boolean('disponible');
             $table->string('editeur');
             $table->text('description')->nullable();
-            
+
             $table->timestamps();
         });
     }

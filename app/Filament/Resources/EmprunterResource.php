@@ -27,7 +27,7 @@ class EmprunterResource extends Resource
                     ->relationship('user', 'name')
                     ->required(),
                 Forms\Components\Select::make('livre_id')
-                    ->relationship('livre', 'id')
+                    ->relationship('livre', 'titre')
                     ->required(),
                 Forms\Components\DatePicker::make('date_emprunt')
                     ->required(),
